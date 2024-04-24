@@ -1,8 +1,9 @@
 ﻿using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using SES.Data.Access.EF.Contexts;
 
-namespace SES.Application.StartupConfiguration;
+namespace SES.WebApi.StartupConfiguration;
 
 public class Startup
 {
@@ -27,9 +28,9 @@ public class Startup
             });
         });
         
-        /*services.AddDbContext<MainDbContext>(options =>
+        services.AddDbContext<MainDbContext>(options =>
             options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"))
-        );*/
+        );
 
         services.AddControllersWithViews()
             .AddJsonOptions(options =>

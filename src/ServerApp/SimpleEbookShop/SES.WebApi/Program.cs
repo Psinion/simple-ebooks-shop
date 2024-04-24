@@ -1,6 +1,6 @@
-using SES.Application.StartupConfiguration;
+using SES.WebApi.StartupConfiguration;
 
-namespace SES.Application;
+namespace SES.WebApi;
 
 public class Program
 {
